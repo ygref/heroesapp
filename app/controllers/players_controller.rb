@@ -4,6 +4,9 @@ class PlayersController < ApplicationController
     render :index
 end
 
-
+def show
+  @player = Player.find_by(id: params[:id])
+  render :show
+end
 
 end
