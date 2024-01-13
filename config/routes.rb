@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   # root "articles#index"
 get "/players" => "players#index"
 get "/players/:id" => "players#show"
+post "/players" => "players#create"
 
 get "/characters" => "characters#index"
 get "/characters/:id" => "characters#show"
-
+post "/characters" => "characters#create"
+delete "characters/:id" => "characters#destroy"
 end
