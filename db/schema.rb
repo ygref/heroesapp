@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_13_211852) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_19_160552) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,4 +32,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_13_211852) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "players_characters", force: :cascade do |t|
+    t.bigint "player_id", null: false
+    t.bigint "character_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_players_characters_on_character_id"
+    t.index ["player_id"], name: "index_players_characters_on_player_id"
+  end
+
+  add_foreign_key "players_characters", "characters"
+  add_foreign_key "players_characters", "players"
 end
