@@ -1,7 +1,5 @@
 json.array! @players_characters, partial: "players_characters/players_character", as: :players_character
 
-
-
 json.array! @players_characters do |players_character|
   json.extract! players_character, :id, :created_at, :updated_at
 
