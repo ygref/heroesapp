@@ -1,2 +1,3 @@
 json.id players_character.id
 json.playername players_character.player.playername
+json.character_name players_character.character.character_name
