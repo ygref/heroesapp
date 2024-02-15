@@ -2,3 +2,5 @@ json.id players_character.id
 json.playername players_character.player.playername
 json.character_name players_character.character.character_name
 json.character_role players_character.character.character_role
+json.role_tier players_character.character.role_tier
+json.thumbnail players_character.character.thumbnail
